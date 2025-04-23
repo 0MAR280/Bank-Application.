@@ -1410,7 +1410,7 @@ bool performAction(vector <stUserAccount>& usersAccounts, vector <stBankAccount>
 
 	}
 
-	if (action != enAction::DIS && action != enAction::TRNS || action != enAction::EXT)
+	if (action != enAction::DIS && action != enAction::TRNS && action != enAction::EXT)
 	{
 		displayActionScreen(action);
 
