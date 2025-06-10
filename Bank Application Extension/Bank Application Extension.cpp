@@ -1471,11 +1471,9 @@ bool logIn(vector <stUserAccount>& usersAccounts)
 
 	if (isFound)
 	{
-		activeUser = usersAccounts.at(accountPos);
-
 		if (usersAccounts.at(accountPos).PINCode == PINCode)
 		{
-
+			activeUser = usersAccounts.at(accountPos);
 			system("cls");
 			displayUserPermissions(activeUser);
 			system("pause");
@@ -1523,11 +1521,11 @@ void startProgram()
 			usersRecords = packUsersRecords(usersAccounts);
 
 		}
+
+		saveBankRecords(bankRecords);
+		saveUsersRecords(usersRecords);
+
 	}
-
-	saveBankRecords(bankRecords);
-	saveUsersRecords(usersRecords);
-
 }
 
 int main()
